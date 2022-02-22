@@ -8,18 +8,31 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Dokument</title>
 </head>
-<body class ="bg-blue-600">
-    <div class="fles mt-20 justify-center">
-        <div class="fount-bold text-white text-center text-3xl mt-10 justify-center items- center">
+<body class ="bg-blue-700 md-2">
+    <div class="flex justify-center mt-24 space-x-20">
             <img src="/img/pin.png" alt="" class="py-10">
-            <div class="flex text-center ml42 text-2xl text-white">
-                <h1 class="py-32">MASUKAN PIN</h1>
-                <from>
-                    <input type="password" id="pin" required name="pin" value="">
-                    <input type="submit" value="ENTER">
-                </from>
+
+            <div class="text-center text-4xl space-y-24 my-16">
+                <h1 class="font-bold text-white">MASUKAN PIN</h1>
+                <input class="border-2 border-black-600" type="password" placeholder="masukan pin">
+                <a href="ambiltunai.html"><label class="text-white">ENTER</label></a>
+                <h1 class="font-bold text-white">TEKAN 'ENTER' JIKA SELESAI<br>MEMASUKAN PIN</h1>
             </div>
         </div>
     </div>
 </body>
+
+    <script>
+        function pin() {
+            let pin = document.getElementById("Nopain").value;
+            console.info(pin);
+            if (pin == 'rizkiganteng') {
+                window.open('/pages/ambiltunai.html','_blank');
+                window.close();
+            } else {
+                alert('pin yang anda masukan salah')
+            }
+        };
+    </script>
+    
 </html>
